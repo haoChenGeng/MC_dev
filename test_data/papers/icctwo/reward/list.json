@@ -1,0 +1,82 @@
+{
+    "data": {
+        "totalNum": 20,
+        "list": [{
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "1000元理财金",
+                "recordId": 1825,
+                "rewardCategory": 4
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "普通门票",
+                "sendId": 2207,
+                "recordId": 1824,
+                "rewardCategory": 5,
+                "flag": "1"
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "普通门票",
+                "sendId": 2206,
+                "recordId": 1823,
+                "rewardCategory": 5,
+                "flag": "0"
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "普通门票",
+                "sendId": 2205,
+                "recordId": 1822,
+                "rewardCategory": 5,
+                "flag": "0"
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "普通门票",
+                "sendId": 2204,
+                "recordId": 1821,
+                "rewardCategory": 5,
+                "flag": "0"
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "1000元理财金",
+                "recordId": 1820,
+                "rewardCategory": 4
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "VIP门票",
+                "sendId": 2203,
+                "recordId": 1819,
+                "rewardCategory": 5,
+                "flag": "0"
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "1000元理财金",
+                "recordId": 1818,
+                "rewardCategory": 4
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "普通门票",
+                "sendId": 2192,
+                "recordId": 1803,
+                "rewardCategory": 5,
+                "flag": "0"
+            },
+            {
+                "prizeDate": "2017-04-28 14:07:56",
+                "prizeName": "普通门票",
+                "sendId": 2191,
+                "recordId": 1802,
+                "rewardCategory": 5,
+                "flag": "0"
+            }
+        ]
+    },
+    "message": "success",
+    "code": "M00000"
+}

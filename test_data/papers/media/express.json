@@ -1,0 +1,71 @@
+{
+    "code": "M00000",
+    "data": {
+        "historyMoneyUnit1": 651,
+        "historyMoneyUnit2": 370,
+        "totalNum": 251,
+        "list": [{
+            "id": 816,
+            "title": "关于自媒体恶意诽谤小牛的郑重声明",
+            "publishDate": "2017-05-18",
+            "img": "http://image.xiaoniu88.com/image/image_upload/ce773b85-4492-42c0-b1d7-1b3c4faf3cf8.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=816"
+        }, {
+            "id": 815,
+            "title": "央行金融科技委成立，小牛在线与麦肯锡谈fintech或年内美国上市",
+            "publishDate": "2017-05-18",
+            "img": "http://image.xiaoniu88.com/image/image_upload/a26f0614-16fb-4886-bd91-9b0f67147a55.png",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=815"
+        }, {
+            "id": 813,
+            "title": "小牛在线王洁凤对话麦肯锡：中国将赢得金融科技革命",
+            "publishDate": "2017-05-11",
+            "img": "http://image.xiaoniu88.com/image/image_upload/d23cdcc3-6d53-4873-96a3-3345616ae80d.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=813"
+        }, {
+            "id": 811,
+            "title": "小牛在线受邀参加经济学人Fintech峰会 探讨亚洲科技金融新趋势",
+            "publishDate": "2017-05-10",
+            "img": "http://image.xiaoniu88.com/image/image_upload/64c9aca4-675e-415c-ad37-c104617ea35f.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=811"
+        }, {
+            "id": 808,
+            "title": "2017小牛在线“宝贝很牛”公益计划湖南站圆满落幕",
+            "publishDate": "2017-04-28",
+            "img": "http://image.xiaoniu88.com/image/image_upload/f5f5a7f9-e50a-4900-ab8c-2c3e048702e4.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=808"
+        }, {
+            "id": 807,
+            "title": "肩负行业责任稳步前行 小牛在线连任广东互金协会理事单位",
+            "publishDate": "2017-04-28",
+            "img": "http://image.xiaoniu88.com/image/image_upload/292926a9-b768-4207-9b26-f10048ee0199.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=807"
+        }, {
+            "id": 802,
+            "title": "小牛在线“宝贝很牛”公益第二季启动 致力开拓山区孩子视野",
+            "publishDate": "2017-04-24",
+            "img": "http://image.xiaoniu88.com/image/image_upload/a8c0078e-0ff1-4384-a22e-6f0014741261.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=802"
+        }, {
+            "id": 798,
+            "title": "社科院黄国平博士一行到访小牛，共探行业合规健康发展",
+            "publishDate": "2017-04-20",
+            "img": "http://image.xiaoniu88.com/image/image_upload/3c5eb982-e6f1-45a7-b9d7-b70e2aa6862d.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=798"
+        }, {
+            "id": 796,
+            "title": "坚持安全、稳定、合规发展 小牛在线第二届投资者见面会顺利展开",
+            "publishDate": "2017-04-20",
+            "img": "http://image.xiaoniu88.com/image/image_upload/91bb6501-0b36-4940-935b-9465d92e3b6d.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=796"
+        }, {
+            "id": 795,
+            "title": "小牛在线稳步合规 拥抱监管打造透明信披",
+            "publishDate": "2017-04-19",
+            "img": "http://image.xiaoniu88.com/image/image_upload/e7cc898d-9368-4966-b925-905f88f7abbd.jpg",
+            "detailUrl": "https://m.xiaoniu88.com:8477/mobile/s/html/app/3.0/news/build/html/detail.html?id=795"
+        }]
+    },
+    "message": "success",
+    "serverTime": 1495855601555
+}

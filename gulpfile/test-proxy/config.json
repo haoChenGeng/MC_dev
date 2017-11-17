@@ -1,0 +1,25 @@
+[{
+  "reg": "mobile\/papers\/icctwo\/active\/status.json",
+  "local": "../../test_data/papers/icctwo/active/status1.json"
+}, {
+  "reg": "mobile\/papers\/icctwo\/reward\/drawCount.json",
+  "local": "../../test_data/papers/icctwo/reward/drawCount1.json"
+}, {
+  "reg": "mobile\/papers\/icctwo\/draw.json",
+  "local": "../../test_data/papers/icctwo/draw3.json"
+}, {
+  "reg": "mobile\/([^\\.]+.json)(\\?.*)?",
+  "local": "../../test_data/$1"
+}, {
+  "reg": "/msg/notice/list",
+  "local": "../../test_data/papers/icctwo/active/status1.json"
+}, {
+  "reg": "/credit/loan/record",
+  "local": "../../test_data/papers/niudai/test3.json"
+}, {
+  "reg": "/credit/refund/record",
+  "local": "../../test_data/papers/niudai/test2.json"
+}, {
+  "reg": "/msg/notice/list",
+  "local": "../../test_data/papers/niudai/test1.json"
+}]

@@ -1,0 +1,14 @@
+{
+    "data": {
+        "userId": 12722,
+        "recordId": 1830,
+        "rewardCategory": 5,
+        "rewardName": "足球",
+        "rewardNum": 1,
+        "createTime": "2017-04-28 14:08:00",
+        "origin": "国际冠军杯豪门论剑活动",
+        "logisticStatus": 2
+    },
+    "message": "success",
+    "code": "M00000"
+}

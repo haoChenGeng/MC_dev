@@ -1,0 +1,42 @@
+{
+  "name": "niudai-pro",
+  "version": "1.0.0",
+  "description": "niudai pro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "niudai",
+    "pro"
+  ],
+  "author": "xn",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-watch": "^4.3.11",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "superagent": "^3.8.1",
+    "uglify-js": "^3.1.6",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  }
+}

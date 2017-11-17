@@ -1,0 +1,107 @@
+{
+    "data": {
+        "winningList": [{
+                "userName": "m***********ao",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "普通门票",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "普通门票",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "普通门票",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "普通门票",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "VIP门票",
+                "unit": "张"
+            },
+            {
+                "userName": "m****ao",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "s****ai",
+                "rewardName": "VIP门票",
+                "unit": "张"
+            },
+            {
+                "userName": "s****ai",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "s****ai",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "a****23",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "a****23",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "a****23",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "l****ls",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "l****ls",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "l****ls",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "l****16",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            },
+            {
+                "userName": "l****16",
+                "rewardName": "1000元理财金",
+                "unit": "张"
+            }
+        ]
+    },
+    "message": "success",
+    "code": "M00000"
+}
