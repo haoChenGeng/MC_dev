@@ -15,8 +15,10 @@ class App extends React.Component {
       data: [],
       lis: [],
       isLoad: false,
-      noMore: false
+      noMore: false,
+      noList: false
     }
+    this.lis = [];
   }
 
   componentDidMount() {
@@ -24,11 +26,19 @@ class App extends React.Component {
     window.onscroll = () => {
       if (Scroll.scrollTop() + Scroll.clientHeight() == Scroll.scrollHeight()) {
         this.setState({
-          isLoad: true
+          isLoad: true,
+          // lis: []
         })
         this.getListData();
       }
     }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('-----------------------');
+    console.log(nextState);
+    console.log(this.state);
+    return true;
   }
 
   getListData(pageIndex,pageSize) {    
@@ -53,36 +63,39 @@ class App extends React.Component {
             this.setState({
               noMore: true
             })
-          }else {
+          }else if (pageIndex == 1) {
             this.setState({
               data: res.data.datas
+            })
+          }
+          else {
+            this.setState({
+              data: res.data.datas.slice(4)
+            })
+          }
+          if (this.state.isLoad) {
+            this.setState({
+              isLoad: false
             })
           }
         }else {
           alert(res.message);
         }
-        if (this.state.isLoad) {
-          this.setState({
-            isLoad: false
-          })
-        }
       });
   }
 
-  _try(param) {
-    this.setState({
-      text: param
-    })
-  }
 
   render() {
     const data = this.state.data;
+console.log(data);
+    let liss = [];
     data.map((item,i) => {
       this.state.lis.push(
         <Message key={item.id} title={item.title} message={item.content} time={item.createTime} />
       )
     });
-    // console.log(this.state.lis);
+    // this.state.lis = liss;
+console.log(this.state.lis);
     return (
         <div>
           <div>

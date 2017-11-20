@@ -96,4 +96,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('repayment'))
+ReactDOM.render(<App />, document.getElementById('refund'))

@@ -31,7 +31,7 @@ class App extends React.Component {
     }
   }
 
-  getListData(pageIndex, pageSize) {
+  getListData(pageIndex,pageSize) {    
     Briger('token', (param) => {
       this._try(param)
     })
@@ -49,16 +49,16 @@ class App extends React.Component {
             this.setState({
               noList: true
             })
-          } else if (!res.data.datas.length) {
+          }else if (!res.data.datas.length) {
             this.setState({
               noMore: true
             })
-          } else {
+          }else {
             this.setState({
               data: res.data.datas
             })
           }
-        } else {
+        }else {
           alert(res.message);
         }
         if (this.state.isLoad) {
@@ -77,7 +77,7 @@ class App extends React.Component {
 
   render() {
     const data = this.state.data;
-    data.map((item, i) => {
+    data.map((item,i) => {
       this.state.lis.push(
         <ListLi key={item.orderId} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
       )
@@ -96,4 +96,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('borrow'))
+ReactDOM.render(<App />, document.getElementById('loan'))

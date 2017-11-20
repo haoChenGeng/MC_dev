@@ -37,7 +37,7 @@ class App extends React.Component {
     })
     // ajax
     Request
-      .post('/credit/refund/record')
+      .post('/credit/loan/record')
       .send({
         "pageIndex": pageIndex || '',
         "pageSize": 10
@@ -77,17 +77,17 @@ class App extends React.Component {
 
   render() {
     const data = this.state.data;
-    // data.map((item, i) => {
-    //   this.state.lis.push(
-    //     <ListLi key={item.orderId} amount={item.refundAmount} date={item.refundDate} status={item.refundStatus} statusStr={item.refundStatusStr} repaymentType={item.refundTypeStr} />
-    //   )
-    // });
+    data.map((item, i) => {
+      this.state.lis.push(
+        <ListLi key={item.orderId} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
+      )
+    });
     // console.log(this.state.lis);
     return (
       <div>
         <div>
           {
-            this.state.noList ? <NoList msg="无还款记录" /> : this.state.lis
+            this.state.noList ? <NoList msg="无借款记录" /> : this.state.lis
           }
         </div>
         <LoadMore isLoad={this.state.isLoad} noMore={this.state.noMore} />
@@ -96,4 +96,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('repaymentD'))
+ReactDOM.render(<App />, document.getElementById('loanD'))

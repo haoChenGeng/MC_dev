@@ -13,7 +13,7 @@ class MessageCard extends React.Component {
       <div ref="card" style={assign({}, styles.card)}>
         <p style={assign({}, styles.cardHead)} > {this.props.title} </p>
         <div style={assign({}, styles.cardCont)} > {this.props.content} </div> 
-        <a href="#" style={assign({}, styles.cardLink)} ><span> 查看详情</span><span style={assign({}, styles.cardTime)}>{this.props.createTime}</span > </a>
+        <a href="#" style={assign({}, styles.cardLink)} ><span> 查看详情</span><span style={assign({}, styles.cardTime)}>{this.props.time}</span > </a>
       </div>
     )
   }

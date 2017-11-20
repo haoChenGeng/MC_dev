@@ -11,7 +11,7 @@
   "reg": "mobile\/([^\\.]+.json)(\\?.*)?",
   "local": "../../test_data/$1"
 }, {
-  "reg": "/msg/notice/list",
+  "reg": "/msg/notice/list1",
   "local": "../../test_data/papers/icctwo/active/status1.json"
 }, {
   "reg": "/credit/loan/record",
