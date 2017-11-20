@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import Request from 'superagent';
 
 import Briger from '../../common/js/util/briger';
-import Message from './component/messageCard.jsx';
-import Scroll from '../../common/js/util/scroll';
-import LoadMore from '../../common/js/component/loadMore.jsx';
-import NoList from '../../common/js/component/noList.jsx';
+// import Message from './component/messageCard.jsx';
+// import Scroll from '../../common/js/util/scroll';
+// import LoadMore from '../../common/js/component/loadMore.jsx';
+// import NoList from '../../common/js/component/noList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -52,17 +52,19 @@ class App extends React.Component {
   render() {    
     return (
       <div>
-        <ul>
-          <li>{}</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul className="notice-list">
+          <li><span>借款金额</span><span>￥5000</span></li>
+          <li><span>收款账户</span><span></span></li>
+          <li><span>日利息</span><span></span></li>
+          <li><span>起止时间</span><span></span></li>
+          <li><span>借款人姓名</span><span></span></li>
+          <li><span>借款人身份证</span><span></span></li>
+          <li><span>还款银行卡</span><span></span></li>
+          <li><span>借款合同</span><span><a href="#" style={{color:'orange',display:'inline-block'}}>查看</a></span></li>
         </ul>
       </div>
     )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('notice'))
