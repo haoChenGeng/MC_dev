@@ -1,0 +1,13 @@
+{
+  "code": "0",
+  "data": {
+    "id": "29",
+    "content": "as",
+    "readStatus": 1,
+    "createTime": "2016-05-24 15:55:31",
+    "title": "test",
+    "source": "test",
+    "contentType": 2
+  },
+  "msg": "成功"
+}

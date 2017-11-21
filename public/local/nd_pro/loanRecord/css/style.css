@@ -46,3 +46,20 @@
   width: 50%;
   vertical-align: 10px;
 }
+
+.notice-list {
+  padding: 10px 20px;
+}
+
+.notice-list li {
+  line-height: 40px;
+}
+
+.notice-list li span:first-child {
+  width: 40%;
+  display: inline-block;
+}
+
+.notice-list li span:last-child {
+  display: inline-block;
+}

@@ -35,9 +35,7 @@ class App extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('-----------------------');
-    console.log(nextState);
-    console.log(this.state);
+    
     return true;
   }
 

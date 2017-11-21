@@ -3,32 +3,22 @@ import ReactDOM from 'react-dom';
 import Request from 'superagent';
 
 import Briger from '../../common/js/util/briger';
-import ListLi from './component/listLi.jsx';
-import Scroll from '../../common/js/util/scroll';
-import LoadMore from '../../common/js/component/loadMore.jsx';
-import NoList from '../../common/js/component/noList.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
-      lis: [],
-      isLoad: false,
-      noMore: false
+      dataDetail: {}
     }
   }
 
   componentDidMount() {
-    this.getListData(1);
-    window.onscroll = () => {
-      if (Scroll.scrollTop() + Scroll.clientHeight() == Scroll.scrollHeight()) {
-        this.setState({
-          isLoad: true
-        })
-        this.getListData();
-      }
-    }
+    this.getListData();
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+
+    return true;
   }
 
   getListData(pageIndex, pageSize) {
@@ -37,60 +27,36 @@ class App extends React.Component {
     })
     // ajax
     Request
-      .post('/credit/loan/record')
+      .post('/credit/loan/record/detail')
       .send({
-        "pageIndex": pageIndex || '',
-        "pageSize": 10
+        orderId: '1'
       })
       .end((err, res) => {
         var res = JSON.parse(res.text);
         if (res.code == '0') {
-          if (!res.data.datas.length && pageIndex == 1) {
-            this.setState({
-              noList: true
-            })
-          } else if (!res.data.datas.length) {
-            this.setState({
-              noMore: true
-            })
-          } else {
-            this.setState({
-              data: res.data.datas
-            })
-          }
+          this.setState({
+            dataDetail: res.data
+          })
         } else {
           alert(res.message);
-        }
-        if (this.state.isLoad) {
-          this.setState({
-            isLoad: false
-          })
         }
       });
   }
 
-  _try(param) {
-    this.setState({
-      text: param
-    })
-  }
 
   render() {
-    const data = this.state.data;
-    data.map((item, i) => {
-      this.state.lis.push(
-        <ListLi key={item.orderId} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
-      )
-    });
-    // console.log(this.state.lis);
     return (
       <div>
-        <div>
-          {
-            this.state.noList ? <NoList msg="无借款记录" /> : this.state.lis
-          }
-        </div>
-        <LoadMore isLoad={this.state.isLoad} noMore={this.state.noMore} />
+        <ul className="notice-list">
+          <li><span>借款金额</span><span>￥{this.state.dataDetail.loanAmount}</span></li>
+          <li><span>收款账户</span><span>{this.state.dataDetail.bankName}({this.state.dataDetail.bankCardNo})</span></li>
+          <li><span>日利息</span><span>{this.state.dataDetail.rate}</span></li>
+          <li><span>起止时间</span><span>{this.state.dataDetail.loanDate}-{this.state.dataDetail.refundDate}</span></li>
+          <li><span>借款人姓名</span><span>{this.state.dataDetail.userName}</span></li>
+          <li><span>借款人身份证</span><span>{this.state.dataDetail.idCard}</span></li>
+          <li><span>还款银行卡</span><span>{this.state.dataDetail.bankName}({this.state.dataDetail.bankCardNo})</span></li>
+          <li><span>借款合同</span><span><a href={this.state.dataDetail.contractUrl} style={{ color: 'orange', display: 'inline-block' }}>查看</a></span></li>
+        </ul>
       </div>
     )
   }

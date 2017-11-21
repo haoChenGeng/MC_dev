@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 import Request from 'superagent';
 
 import Briger from '../../common/js/util/briger';
-import Message from './component/messageCard.jsx';
-import Scroll from '../../common/js/util/scroll';
-import LoadMore from '../../common/js/component/loadMore.jsx';
-import NoList from '../../common/js/component/noList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -31,10 +27,9 @@ class App extends React.Component {
     })
     // ajax
     Request
-      .post('/msg/notice/list')
+      .post('/msg/notice/read')
       .send({
-        "pageIndex": pageIndex || '',
-        "pageSize": 10
+        noticeId: '1'
       })
       .end((err, res) => {
         var res = JSON.parse(res.text);
@@ -51,18 +46,13 @@ class App extends React.Component {
 
   render() {    
     return (
-      <div>
-        <ul>
-          <li>{}</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <div className="noticeDetail">
+        <h2>{this.state.dataDetail.title}</h2>
+        <p className="date">{this.state.dataDetail.createTime}</p>
+        <p className="content">{this.state.dataDetail.content}</p>
       </div>
     )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('notice'))
