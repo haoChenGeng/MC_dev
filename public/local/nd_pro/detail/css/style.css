@@ -8,10 +8,6 @@ a {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
-.notice-list li span:first-child {
-    width: 30%;
-=======
 .notice-list {
     padding: 10px 20px;
 }
@@ -27,5 +23,4 @@ a {
 
 .notice-list li span:last-child {
     display: inline-block;
->>>>>>> 3f5e27b7ad2e970df86e36598d25f990d5f0ebde
 }
