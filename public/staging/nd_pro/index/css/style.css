@@ -1,31 +1,9 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 a {
-    text-decoration: none;
-}
-
-<<<<<<< HEAD
-.notice-list li span:first-child {
-    width: 30%;
-=======
-.notice-list {
-    padding: 10px 20px;
-}
-
-.notice-list li {
-    line-height: 40px;
-}
-
-.notice-list li span:first-child {
-    width: 40%;
-    display: inline-block;
-}
-
-.notice-list li span:last-child {
-    display: inline-block;
->>>>>>> 3f5e27b7ad2e970df86e36598d25f990d5f0ebde
+  text-decoration: none;
 }

@@ -36,7 +36,7 @@ class App extends React.Component {
         if (res.code == '0') {
           this.setState({
             dataDetail: res.data
-          })
+          });
         } else {
           alert(res.message);
         }

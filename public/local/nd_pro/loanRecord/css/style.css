@@ -3,7 +3,7 @@
   margin: auto;
 }
 
-#borrow {
+#loan {
   padding: 0 5%;
   font-family: PingFangSC-Regular;
   line-height: 1.5em;
@@ -43,8 +43,9 @@
   font-family: PingFangSC-Medium;
   display: inline-block;
   text-align: right;
-  width: 50%;
+  width: 45%;
   vertical-align: 10px;
+  padding-right: 10px;
 }
 
 .notice-list {
@@ -62,4 +63,25 @@
 
 .notice-list li span:last-child {
   display: inline-block;
+}
+
+.list-detail {
+  position: relative;
+}
+
+.list-detail:after,
+.list-detail:before {
+  border: 10px solid transparent;
+  border-left: 10px solid #fff;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  content: ' '
+}
+
+.list-detail:before {
+  border-left-color: #999;
+  right: -21px;
 }

@@ -21,13 +21,19 @@ class ListLi extends React.Component{
       default:
         break;
     }
+    let cx;
+    if (this.props.status == 5 || this.props.status == 6 || this.props.status == 7) {
+      cx = 'list-li-right list-detail';
+    }else {
+      cx = 'list-li-right';
+    }
     return (
       <li className="list-li">
         <div className="list-li-left">
-          <p><span style={assign({},color)}></span>{this.props.amount || 1}</p>
-          <p>{this.props.date || 2}</p>
+          <p><span style={assign({},color)}></span>{this.props.amount}</p>
+          <p>{this.props.date}</p>
         </div>
-        <div className="list-li-right">
+        <div className={cx}>
           {this.props.statusStr}
         </div>
       </li>
