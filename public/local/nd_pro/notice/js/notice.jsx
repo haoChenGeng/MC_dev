@@ -16,7 +16,8 @@ class App extends React.Component {
       lis: [],
       isLoad: false,
       noMore: false,
-      noList: false
+      noList: false,
+      pageIndex: 1
     }
     this.lis = [];
   }
@@ -27,9 +28,10 @@ class App extends React.Component {
       if (Scroll.scrollTop() + Scroll.clientHeight() == Scroll.scrollHeight()) {
         this.setState({
           isLoad: true,
-          // lis: []
+          pageIndex: this.state.pageIndex + 1
         })
-        this.getListData();
+console.log(this.state.pageIndex);
+        this.getListData(this.state.pageIndex);
       }
     }
   }
@@ -47,8 +49,8 @@ class App extends React.Component {
     Request
       .post('/msg/notice/list')
       .send({
-        "pageIndex": pageIndex || '',
-        "pageSize": 10
+        "pageIndex": pageIndex || 1,
+        "pageSize": pageSize || 10
       })
       .end((err, res) => {
         var res = JSON.parse(res.text);
@@ -83,7 +85,7 @@ class App extends React.Component {
 console.log(data);
     data.map((item, i) => {
       this.state.lis.push(
-        <Notice key={item.id} title={item.title} message={item.content} time={item.createTime} />
+        <Notice key={item.id} id={item.id} title={item.title} contentType={item.contentType} source={item.source} content={item.content} time={item.createTime} />
       )
     });
 console.log(this.state.lis);

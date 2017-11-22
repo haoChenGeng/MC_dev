@@ -14,6 +14,10 @@
   padding: 15px 0;
 }
 
+.list-li>a {
+  display: block;
+}
+
 .list-li-left {
   display: inline-block;
   text-align: left;

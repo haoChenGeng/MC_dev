@@ -15,7 +15,8 @@ class App extends React.Component {
       data: [],
       lis: [],
       isLoad: false,
-      noMore: false
+      noMore: false,
+      pageIndex: 1
     }
   }
 
@@ -24,9 +25,10 @@ class App extends React.Component {
     window.onscroll = () => {
       if (Scroll.scrollTop() + Scroll.clientHeight() == Scroll.scrollHeight()) {
         this.setState({
-          isLoad: true
+          isLoad: true,
+          pageIndex: this.state.pageIndex + 1
         })
-        this.getListData();
+        this.getListData(this.state.pageIndex);
       }
     }
   }
@@ -39,8 +41,8 @@ class App extends React.Component {
     Request
       .post('/credit/loan/record')
       .send({
-        "pageIndex": pageIndex || '',
-        "pageSize": 10
+        "pageIndex": pageIndex || 1,
+        "pageSize": pageSize || 10
       })
       .end((err, res) => {
         var res = JSON.parse(res.text);
@@ -79,7 +81,7 @@ class App extends React.Component {
     const data = this.state.data;
     data.map((item,i) => {
       this.state.lis.push(
-        <ListLi key={item.orderId} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
+        <ListLi key={item.orderId} id={item.orderId} contentType={item.contentType} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
       )
     });
     console.log(this.state.lis);

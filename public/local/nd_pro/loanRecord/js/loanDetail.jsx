@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Request from 'superagent';
 
 import Briger from '../../common/js/util/briger';
+import Utils from '../../common/js/util/utils';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getListData();
+    let orderId = Utils.GetQueryString('orderId');
+    this.getListData(orderId);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -21,7 +23,7 @@ class App extends React.Component {
     return true;
   }
 
-  getListData(pageIndex, pageSize) {
+  getListData(orderId) {
     Briger('token', (param) => {
       this._try(param)
     })
@@ -29,7 +31,7 @@ class App extends React.Component {
     Request
       .post('/credit/loan/record/detail')
       .send({
-        orderId: '1'
+        orderId: orderId
       })
       .end((err, res) => {
         var res = JSON.parse(res.text);

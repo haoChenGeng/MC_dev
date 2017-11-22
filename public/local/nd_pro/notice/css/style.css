@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+body.notice {
+  background-color: #f4f4f4;
+}
+
 .noticeDetail {
   padding: 20px;
 }
