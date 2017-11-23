@@ -6,7 +6,6 @@ class ListLi extends React.Component{
     super(props);
   }
   render() {
-    console.log(this.props);
     let color;
     switch (this.props.status) {
       case 6:

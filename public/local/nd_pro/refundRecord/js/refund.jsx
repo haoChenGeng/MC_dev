@@ -12,10 +12,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+      // data: [],
       lis: [],
       isLoad: false,
-      noMore: false
+      noMore: false,
+      pageIndex: 1
     }
   }
 
@@ -24,9 +25,10 @@ class App extends React.Component {
     window.onscroll = () => {
       if (Scroll.scrollTop() + Scroll.clientHeight() == Scroll.scrollHeight()) {
         this.setState({
-          isLoad: true
+          isLoad: true,
+          pageIndex: this.state.pageIndex + 1
         })
-        this.getListData();
+        this.getListData(this.state.pageIndex);
       }
     }
   }
@@ -39,8 +41,8 @@ class App extends React.Component {
     Request
       .post('/credit/refund/record')
       .send({
-        "pageIndex": pageIndex || '',
-        "pageSize": 10
+        "pageIndex": pageIndex || 1,
+        "pageSize": pageSize || 10
       })
       .end((err, res) => {
         var res = JSON.parse(res.text);
@@ -54,9 +56,7 @@ class App extends React.Component {
               noMore: true
             })
           }else {
-            this.setState({
-              data: res.data.datas
-            })
+            this.renderList(res.data.datas);
           }
         }else {
           alert(res.message);
@@ -75,13 +75,25 @@ class App extends React.Component {
     })
   }
 
+  renderList(data) {
+    let list = [];
+    data.map((item, i) => {
+      list.push(
+        <ListLi key={item.orderId} amount={item.refundAmount} date={item.refundDate} status={item.refundStatus} statusStr={item.refundStatusStr} repaymentType={item.refundTypeStr} />
+      )
+    });
+    this.setState({
+      lis: this.state.lis.concat(list)
+    })
+  }
+
   render() {
-    const data = this.state.data;
+    /* const data = this.state.data;
     data.map((item,i) => {
       this.state.lis.push(
         <ListLi key={item.orderId} amount={item.refundAmount} date={item.refundDate} status={item.refundStatus} statusStr={item.refundStatusStr} repaymentType={item.refundTypeStr} />
       )
-    });
+    }); */
     console.log(this.state.lis);
     return (
       <div>

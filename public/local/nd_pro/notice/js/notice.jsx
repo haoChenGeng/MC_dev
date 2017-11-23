@@ -12,14 +12,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+      // data: [],
       lis: [],
       isLoad: false,
       noMore: false,
       noList: false,
       pageIndex: 1
     }
-    this.lis = [];
   }
 
   componentDidMount() {
@@ -30,7 +29,6 @@ class App extends React.Component {
           isLoad: true,
           pageIndex: this.state.pageIndex + 1
         })
-console.log(this.state.pageIndex);
         this.getListData(this.state.pageIndex);
       }
     }
@@ -39,6 +37,18 @@ console.log(this.state.pageIndex);
   shouldComponentUpdate(nextProps, nextState) {
 
     return true;
+  }
+
+  renderList(data) {
+    let list = [];
+    data.map((item, i) => {
+      list.push(
+        <Notice key={item.id} id={item.id} title={item.title} contentType={item.contentType} source={item.source} content={item.content} time={item.createTime} />
+      )
+    });
+    this.setState({
+      lis: this.state.lis.concat(list)
+    })
   }
 
   getListData(pageIndex, pageSize) {
@@ -64,9 +74,7 @@ console.log(this.state.pageIndex);
               noMore: true
             })
           } else {
-            this.setState({
-              data: res.data.datas
-            })
+            this.renderList(res.data.datas);
           }
           if (this.state.isLoad) {
             this.setState({
@@ -81,13 +89,13 @@ console.log(this.state.pageIndex);
 
 
   render() {
-    const data = this.state.data;
+    /* const data = this.state.data;
 console.log(data);
     data.map((item, i) => {
       this.state.lis.push(
         <Notice key={item.id} id={item.id} title={item.title} contentType={item.contentType} source={item.source} content={item.content} time={item.createTime} />
       )
-    });
+    }); */
 console.log(this.state.lis);
     return (
       <div>

@@ -14,7 +14,7 @@
   "reg": "/msg/notice/read",
   "local": "../../test_data/papers/niudai/noticeDetail.json"
 }, {
-  "reg": "/credit/loan/record",
+  "reg": "/credit/loan/record/detail",
   "local": "../../test_data/papers/niudai/test3.json"
 }, {
   "reg": "/credit/refund/record",
@@ -22,4 +22,7 @@
 }, {
   "reg": "/msg/notice/list",
   "local": "../../test_data/papers/niudai/test1.json"
+}, {
+  "reg": "/credit/loan/record",
+  "local": "../../test_data/papers/niudai/test4.json"
 }]

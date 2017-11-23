@@ -32,6 +32,11 @@ class App extends React.Component {
       }
     }
   }
+  shouldComponentUpdate(nextProps,nextState) {
+    console.log(this.state);
+    console.log(nextState);
+    return true;
+  }
 
   getListData(pageIndex,pageSize) {    
     Briger('token', (param) => {
@@ -56,9 +61,7 @@ class App extends React.Component {
               noMore: true
             })
           }else {
-            this.setState({
-              data: res.data.datas
-            })
+            this.renderList(res.data.datas);
           }
         }else {
           alert(res.message);
@@ -71,6 +74,18 @@ class App extends React.Component {
       });
   }
 
+  renderList(data) {
+    let list = [];
+    data.map((item,i) => {
+      list.push(
+        <ListLi key={item.orderId} id={item.orderId || item.businessId} contentType={item.contentType} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
+      )
+    });
+    this.setState({
+      lis: this.state.lis.concat(list)
+    })
+  }
+
   _try(param) {
     this.setState({
       text: param
@@ -78,12 +93,12 @@ class App extends React.Component {
   }
 
   render() {
-    const data = this.state.data;
+    /* const data = this.state.data;
     data.map((item,i) => {
       this.state.lis.push(
-        <ListLi key={item.orderId} id={item.orderId} contentType={item.contentType} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
+        <ListLi key={item.orderId} id={item.orderId || item.businessId} contentType={item.contentType} amount={item.loanAmount} date={item.loanDate} status={item.status} statusStr={item.statusStr} />
       )
-    });
+    }); */
     console.log(this.state.lis);
     return (
       <div>
