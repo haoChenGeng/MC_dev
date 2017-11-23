@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Request from 'superagent';
 
 import Briger from '../../common/js/util/briger';
-import Utils from '../../common/js/util';
+import Utils from '../../common/js/util/utils';
 
 class App extends React.Component {
   constructor(props) {

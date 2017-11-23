@@ -48,13 +48,21 @@ class App extends React.Component {
 
 
   render() {
+    console.log(this.state.dataDetail);
+    let data = {};
+    if (Object.keys(this.state.dataDetail).length) {
+      // this.state.dataDetail['rate'] = this.state.dataDetail['rate'].toFixed(2);
+      this.state.dataDetail['loanAmount'] = this.state.dataDetail.loanAmount/100;
+      this.state.dataDetail['idCard'] = this.state.dataDetail.idCard.substr(0,4) + this.state.dataDetail.idCard.substr(4).replace(/./g,'*');
+    }
+    let rate = !this.state.dataDetail.rate || this.state
     return (
       <div>
         <ul className="notice-list">
           <li><span>借款金额</span><span>￥{this.state.dataDetail.loanAmount}</span></li>
           <li><span>收款账户</span><span>{this.state.dataDetail.bankName}({this.state.dataDetail.bankCardNo})</span></li>
-          <li><span>日利息</span><span>{this.state.dataDetail.rate}</span></li>
-          <li><span>起止时间</span><span>{this.state.dataDetail.loanDate}-{this.state.dataDetail.refundDate}</span></li>
+          <li><span>日利息</span><span>{this.state.dataDetail.rate}%</span></li>
+          <li><span>起止时间</span><span>{this.state.dataDetail.loanDate}{this.state.dataDetail.refundDate ? ('-' + this.state.dataDetail.refundDate) : ''}</span></li>
           <li><span>借款人姓名</span><span>{this.state.dataDetail.userName}</span></li>
           <li><span>借款人身份证</span><span>{this.state.dataDetail.idCard}</span></li>
           <li><span>还款银行卡</span><span>{this.state.dataDetail.bankName}({this.state.dataDetail.bankCardNo})</span></li>
